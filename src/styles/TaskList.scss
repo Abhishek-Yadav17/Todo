@@ -1,0 +1,349 @@
+.task-list-container {
+  min-height: 100vh;
+  padding: 10vw 4vw;
+  background: radial-gradient(circle at center, rgba(255, 255, 255, 0.12), #0f1115 70%);
+  color: #fff;
+  overflow-y: auto;
+
+  @media (max-width: 768px) {
+    padding: 25vw 5vw;
+  }
+
+  .topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 4vw;
+    }
+
+    h2 {
+      margin: 0;
+      font-size: 1.5vw;
+      font-weight: 600;
+
+      @media (max-width: 768px) {
+        font-size: 5vw;
+      }
+    }
+
+    .topbar-buttons {
+      display: flex;
+      gap: 2vw;
+
+      @media (max-width: 768px) {
+        flex-direction: column;
+        gap: 3vw;
+        width: 100%;
+      }
+
+      .filter-select {
+        padding: 1vw 2vw;
+        background: rgba(25, 27, 32, 0.75);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 50px;
+        color: #fff;
+        cursor: pointer;
+        font-size: 1vw;
+        outline: none;
+        transition: background 0.2s ease;
+
+        &:hover {
+          background-color: #3a3f47;
+        }
+
+        option {
+          background-color: #1a1c20;
+          color: #fff;
+        }
+
+        @media (max-width: 768px) {
+          width: 100%;
+          font-size: 3.5vw;
+          padding: 3vw 4vw;
+          border-radius: 40px;
+        }
+      }
+
+      button {
+        padding: 1vw 2vw;
+        background: rgba(25, 27, 32, 0.75);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 50px;
+        color: #fff;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        gap: 1vw;
+        transition: background 0.2s ease;
+
+        &:hover {
+          background-color: #3a3f47;
+        }
+
+        i {
+          font-size: 1.2vw;
+
+          @media (max-width: 768px) {
+            font-size: 4vw;
+          }
+        }
+
+        @media (max-width: 768px) {
+          width: 100%;
+          font-size: 3.5vw;
+          padding: 3vw 4vw;
+          border-radius: 40px;
+        }
+      }
+    }
+  }
+
+  .task-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3vw;
+    padding: 2vw 0;
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+      gap: 5vw;
+      padding: 4vw 0;
+    }
+
+    .task-item {
+      width: 30%;
+      padding: 2vw;
+      border-radius: 12px;
+      background-color: #1A1C20;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 2vw;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+      &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.6);
+      }
+
+      @media (max-width: 768px) {
+        width: 100%;
+        padding: 5vw;
+        gap: 3vw;
+      }
+
+      .task-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        h4 {
+          font-size: 1.2vw;
+
+          @media (max-width: 768px) {
+            font-size: 4vw;
+          }
+        }
+
+        i {
+          cursor: pointer;
+          font-size: 1.2vw;
+          line-height: 1;
+          color: #555;
+          transition: color 0.2s;
+
+          &:hover {
+            color: rgb(249, 57, 57);
+          }
+
+          @media (max-width: 768px) {
+            font-size: 4vw;
+          }
+        }
+      }
+
+      .task-desc {
+        font-size: 1vw;
+        color: #AAA;
+        margin-bottom: 2vw;
+        line-height: 1.4;
+
+        @media (max-width: 768px) {
+          font-size: 3.5vw;
+          margin-bottom: 3vw;
+        }
+      }
+
+      .task-footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @media (max-width: 768px) {
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 2vw;
+        }
+
+        h4 {
+          background-color: #3E424B;
+          padding: 6px 1vw;
+          border-radius: 20px;
+          color: #FFF;
+          font-weight: 400;
+          font-size: 0.9vw;
+
+          @media (max-width: 768px) {
+            font-size: 3vw;
+            padding: 1vw 3vw;
+          }
+        }
+
+        .task-meta {
+          display: flex;
+          gap: 10px;
+          align-items: center;
+
+          @media (max-width: 768px) {
+            flex-wrap: wrap;
+          }
+
+          p {
+            font-size: 0.8vw;
+            font-weight: 600;
+
+            @media (max-width: 768px) {
+              font-size: 2.8vw;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    z-index: 99;
+    justify-content: center;
+    align-items: center;
+
+    .modal {
+      background: #1e2126;
+      padding: 2vw;
+      border-radius: 20px;
+      width: 500px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+
+      @media (max-width: 768px) {
+        width: 90%;
+        padding: 6vw;
+      }
+
+      h2 {
+        margin-top: 0;
+        margin-bottom: 20px;
+        font-size: 1.2vw;
+
+        @media (max-width: 768px) {
+          font-size: 5vw;
+        }
+      }
+
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5vw;
+
+        @media (max-width: 768px) {
+          gap: 4vw;
+        }
+
+        label {
+          display: flex;
+          flex-direction: column;
+
+          input,
+          select,
+          textarea {
+            margin-top: 5px;
+            padding: 0.8vw;
+            border-radius: 6px;
+            border: 1px solid #333;
+            background: #2b2f36;
+            color: #fff;
+            font-size: 0.9vw;
+
+            @media (max-width: 768px) {
+              font-size: 3.5vw;
+              padding: 2vw;
+            }
+          }
+
+          textarea {
+            resize: none;
+          }
+        }
+
+        .modal-buttons {
+          display: flex;
+          justify-content: flex-end;
+          gap: 2vw;
+
+          @media (max-width: 768px) {
+            flex-direction: column;
+            gap: 3vw;
+          }
+
+          button {
+            padding: 0.8vw 2vw;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: background 0.2s ease;
+
+            @media (max-width: 768px) {
+              width: 100%;
+              padding: 3vw 4vw;
+              font-size: 3.5vw;
+            }
+          }
+
+          .cancel-btn {
+            background-color: #555;
+            color: #ddd;
+
+            &:hover {
+              background-color: #444;
+            }
+          }
+
+          button[type='submit'] {
+            background-color: #FDA248;
+            color: #000;
+
+            &:hover {
+              background-color: #FAAE63;
+            }
+          }
+        }
+      }
+    }
+  }
+}

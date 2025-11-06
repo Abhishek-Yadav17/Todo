@@ -1,0 +1,26 @@
+.sidebar {
+    width: 80px;
+    height: 95vh;
+    background: rgba(25, 27, 32, 0.75);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2.5vw 0;
+    margin: 2.5vh 1vw;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.35);
+    transition: all 0.3s ease;
+
+    @media (max-width: 768px) {
+        display: none;
+    }
+
+    .home-icon {
+        font-size: 2vw;
+        color: #fff;
+        cursor: pointer;
+    }
+}

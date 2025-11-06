@@ -1,0 +1,58 @@
+.navbar {
+  position: fixed;
+  height: 60px;
+  background: rgba(25, 27, 32, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2vw;
+  width: 80%;
+  top: 4%;
+  right: 8%;
+  color: #FFF;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.35);
+  z-index: 99;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    right: 0;
+    top: 2%;
+    padding: 4vw;
+  }
+
+  h1 {
+    font-size: 1.5vw;
+    font-family: 'Rejouice';
+
+    @media (max-width: 768px) {
+      font-size: 4vw;
+    }
+  }
+
+  .nav2 {
+    display: flex;
+    align-items: center;
+    gap: 2vw;
+
+    h4 {
+      font-size: 1vw;
+      font-weight: 400;
+
+      @media (max-width: 768px) {
+        font-size: 3vw;
+      }
+    }
+
+    i {
+      font-size: 2vw;
+
+      @media (max-width: 768px) {
+        font-size: 5vw;
+      }
+    }
+  }
+}

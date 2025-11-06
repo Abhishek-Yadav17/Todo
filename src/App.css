@@ -1,0 +1,34 @@
+@font-face {
+  font-family: NB;
+  src: url(/fonts/NBInternationalProBoo.ttf);
+}
+
+@font-face {
+  font-family: Rejouice;
+  src: url(/fonts/Rejouice-Headline.ttf);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: NB;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+.app {
+  display: flex;
+  height: 100vh;
+  font-family: Arial, sans-serif;
+}
+
+.main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: #f0f2f5;
+}
